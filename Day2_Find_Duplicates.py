@@ -3,10 +3,12 @@ def find_duplicates(text):
     duplicates = []
 
     for ch in text.lower():
-        if ch not in seen:
-           seen.add(ch)
-        else:
-            duplicates.append(ch)
+        if ch.isalpha():
+            if ch not in seen:
+                seen.add(ch)
+            else:
+                duplicates.append(ch)
         
     return duplicates
-print(find_duplicates("Programming"))            
+print(find_duplicates("Programming"))
+print(find_duplicates("Python.py 123!"))            
