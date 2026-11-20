@@ -21,7 +21,7 @@ def check_anagrams(str1, str2):
                 str2_freq[char] += 1
             else:
                 str2_freq[char] = 1
-    if len(str1) != len(str2):
+    if len(cleared_str1) != len(cleared_str2):
         return False
 
     return str1_freq == str2_freq
